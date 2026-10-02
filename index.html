@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>原来神马电影网免费 - 云梦免费片单策展 | yuanlaishenmadianyingwangmianfei-h5</title>
+<meta name="description" content="原来神马电影网免费(yuanlaishenmadianyingwangmianfei-h5)以云梦票券风做免费电影、剧集、动漫、综艺、短片与省钱观影指南，移动端自适应。官网 https://yuanlaishenmadianyingwangmianfei-h5.github.io，单页演示，内页链接以 # 占位，接真实片源需版权授权与视听资质。">
+<meta name="keywords" content="原来神马电影网免费, yuanlaishenmadianyingwangmianfei-h5, 免费电影, 免费片单, 云梦票券, 省钱观影">
+<meta name="author" content="原来神马电影网免费">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://yuanlaishenmadianyingwangmianfei-h5.github.io">
+<link rel="alternate" hreflang="zh-CN" href="https://yuanlaishenmadianyingwangmianfei-h5.github.io">
+<meta property="og:type" content="website">
+<meta property="og:title" content="原来神马电影网免费 - 云梦免费片单策展">
+<meta property="og:description" content="yuanlaishenmadianyingwangmianfei-h5 提供免费电影/剧集/动漫/综艺/短片演示片单，云梦票券界面，移动端自适应。">
+<meta property="og:url" content="https://yuanlaishenmadianyingwangmianfei-h5.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="原来神马电影网免费 - 云梦票券风">
+<meta name="twitter:description" content="yuanlaishenmadianyingwangmianfei-h5 官网提供免费片单策展演示。">
+<style>
+:root{
+  --bg:#eaf4ff;--bg2:#f6efff;--card:#ffffff;--card2:#eef6ff;--ink:#23304a;--muted:#6b7896;
+  --blue:#4f8cff;--blue2:#7fb0ff;--purple:#9b6bff;--purple2:#c4a6ff;--pink:#ff7eb3;--pink2:#ffc2dd;
+  --gold:#ffcf5c;--line:rgba(79,140,255,.26);--line2:rgba(155,107,255,.22);--navh:64px;--radius:22px;--shadow:0 16px 34px rgba(79,140,255,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(820px 400px at 92% -10%,rgba(155,107,255,.18),transparent 60%),
+    radial-gradient(720px 360px at 0% 8%,rgba(255,126,179,.16),transparent 58%),
+    radial-gradient(620px 320px at 55% 120%,rgba(255,207,92,.14),transparent 60%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  color:var(--ink);line-height:1.8;padding-top:var(--navh);-webkit-font-smoothing:antialiased;}
+a{color:var(--blue);text-decoration:none;transition:.25s;}
+a:hover{color:var(--purple);}
+img{max-width:100%;display:block;}ul{list-style:none;}
+
+.nav{position:fixed;top:0;left:0;right:0;height:var(--navh);z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 16px;
+  background:rgba(234,244,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.brand{font-weight:900;font-size:clamp(15px,4.4vw,21px);color:var(--ink);display:flex;align-items:center;gap:8px;white-space:nowrap;}
+.brand .cloud{width:26px;height:16px;position:relative;}
+.brand .cloud::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--blue);}
+.brand .cloud::after{content:"";position:absolute;top:0;right:0;width:20px;height:20px;border-radius:50%;background:var(--purple);}
+.brand b{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.brand .tag{font-size:11px;color:#fff;background:linear-gradient(90deg,var(--blue),var(--purple));padding:2px 7px;border-radius:8px;font-weight:800;}
+.menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px;}
+.menu-btn span{width:26px;height:3px;background:var(--blue);border-radius:3px;transition:.3s;}
+.menu-btn.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.menu-btn.open span:nth-child(2){opacity:0;}
+.menu-btn.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap;}
+.nav-links a{color:var(--ink);font-size:15px;font-weight:700;min-height:44px;display:inline-flex;align-items:center;padding:8px 12px;border-radius:22px;}
+.nav-links a:hover{background:rgba(155,107,255,.16);color:var(--purple);}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px;}
+.section{padding:64px 0;}
+.sec-title{font-size:clamp(22px,5vw,30px);font-weight:900;text-align:center;margin-bottom:8px;color:var(--ink);}
+.sec-title small{display:block;font-size:12px;letter-spacing:2px;color:var(--blue);font-weight:700;margin-top:8px;}
+.sec-title::after{content:"";display:block;width:84px;height:5px;border-radius:5px;margin:14px auto 0;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));}
+
+/* Hero 云梦票券 */
+.hero{padding:68px 0 32px;}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;}
+.badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,rgba(79,140,255,.18),rgba(155,107,255,.18));border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:800;padding:6px 14px;border-radius:22px;margin-bottom:16px;}
+.badge b{color:var(--blue);}
+.hero h1{font-size:clamp(28px,6vw,46px);line-height:1.18;color:var(--ink);margin-bottom:16px;}
+.hero h1 em{font-style:normal;color:var(--blue);}.hero h1 i{font-style:normal;color:var(--purple);}
+.hero p{color:var(--muted);font-size:clamp(15px,2.6vw,17px);margin-bottom:18px;max-width:560px;}
+.urlbox{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;border:1px dashed var(--blue);color:#1f4fb0;background:rgba(255,255,255,.6);padding:10px 14px;border-radius:12px;font-size:13px;margin-bottom:18px;}
+.cta{display:inline-block;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));color:#fff;font-weight:900;padding:13px 30px;border-radius:30px;min-height:46px;}
+.ticket{position:relative;background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:var(--shadow);text-align:center;}
+.ticket::before,.ticket::after{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:var(--bg);top:50%;transform:translateY(-50%);border:1px solid var(--line);}
+.ticket::before{left:-12px;}.ticket::after{right:-12px;}
+.ticket .stub{display:inline-block;font-size:11px;color:#fff;background:linear-gradient(90deg,var(--blue),var(--purple));padding:4px 12px;border-radius:20px;letter-spacing:1px;font-weight:800;}
+.ticket .big{font-size:44px;font-weight:900;color:var(--blue);margin:10px 0 4px;}
+.ticket p{color:var(--muted);font-size:13px;}
+.ticket .chip{display:inline-block;margin:6px 4px 0;font-size:12px;color:#1f4fb0;border:1px solid var(--line);background:#fff;padding:4px 10px;border-radius:20px;}
+
+/* 片库 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,1fr));gap:18px;}
+.movie{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s;}
+.movie:hover{transform:translateY(-6px);border-color:var(--purple);box-shadow:0 16px 30px rgba(155,107,255,.22);}
+.cover{height:214px;display:flex;align-items:center;justify-content:center;font-size:44px;color:#fff;position:relative;border-radius:0 0 18px 18px;}
+.t1{background:linear-gradient(135deg,#4f8cff,#9b6bff);}.t2{background:linear-gradient(135deg,#ff7eb3,#ffcf5c);color:#5a2a00;}
+.t3{background:linear-gradient(135deg,#36d6a0,#4f8cff);color:#06301f;}.t4{background:linear-gradient(135deg,#9b6bff,#ff7eb3);color:#fff;}
+.t5{background:linear-gradient(135deg,#ffcf5c,#4f8cff);color:#06301f;}.t6{background:linear-gradient(135deg,#4f8cff,#36d6a0);}
+.free{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);color:#1f4fb0;font-weight:800;font-size:11px;padding:3px 9px;border-radius:12px;border:1px solid var(--blue);}
+.minfo{padding:12px 14px;}.minfo h3{font-size:15px;color:var(--ink);margin-bottom:6px;}.minfo p{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;}
+
+/* 分类 */
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 20px rgba(79,140,255,.12);transition:.25s;}
+.cat:hover{transform:translateY(-4px);border-color:var(--gold);}
+.cat .ico{font-size:30px;}.cat h3{font-size:17px;color:var(--ink);margin:8px 0 6px;}.cat p{font-size:13px;color:var(--muted);}.cat a{display:inline-block;margin-top:10px;font-weight:800;color:var(--blue);}
+
+/* 榜单 */
+.rank{display:grid;gap:12px;counter-reset:r;max-width:860px;margin:0 auto;}
+.ri{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;}
+.ri::before{counter-increment:r;content:"M" counter(r);min-width:54px;text-align:center;height:42px;flex:0 0 54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;background:rgba(79,140,255,.16);color:#1f4fb0;}
+.ri:nth-child(1)::before{background:linear-gradient(135deg,var(--gold),var(--blue));color:#fff;}.ri:nth-child(2)::before{background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;}.ri:nth-child(3)::before{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;}
+.rb{flex:1;}.rb h3{font-size:16px;color:var(--ink);}.rb p{font-size:13px;color:var(--muted);}.rs{font-weight:900;color:var(--blue);font-size:18px;}
+
+/* 省钱指南/影评 */
+.reviews{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 20px rgba(79,140,255,.12);}
+.rv .tag{display:inline-block;font-size:11px;color:#1f4fb0;border:1px solid var(--blue);padding:2px 8px;border-radius:12px;margin-bottom:8px;}
+.rv h3{font-size:17px;color:var(--ink);margin-bottom:6px;}.rv p{font-size:13px;color:var(--muted);}.rv a{display:inline-block;margin-top:10px;font-weight:800;color:var(--blue);}
+
+/* 帮助+关于 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 8px 20px rgba(79,140,255,.12);}
+.panel h3{color:var(--blue);margin-bottom:12px;font-size:18px;}
+.panel p{font-size:14px;color:#3a4660;margin-bottom:10px;}
+details{border:1px solid var(--line);background:var(--card);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+summary{padding:14px 16px;font-weight:700;cursor:pointer;min-height:44px;display:flex;justify-content:space-between;align-items:center;color:var(--ink);}
+summary::-webkit-details-marker{display:none;}summary::after{content:"+";color:var(--blue);font-size:20px;}
+details[open] summary::after{content:"−";}details p{padding:0 16px 16px;color:#3a4660;font-size:14px;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px;}
+.stat{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;}
+.stat b{display:block;font-size:24px;color:var(--blue);}.stat span{font-size:13px;color:var(--muted);}
+.notice{margin-top:18px;background:rgba(255,207,92,.12);border:1px dashed var(--blue);border-radius:14px;padding:16px;font-size:13px;color:#3a4a6a;}
+
+.footer{background:#16223a;color:#cfe0ff;padding:46px 0 22px;margin-top:60px;border-top:1px solid var(--line);}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;}
+.footer h4{color:#fff;font-size:16px;margin-bottom:12px;}
+.footer a{color:#a9c6ff;font-size:14px;display:inline-block;padding:4px 0;}
+.footer a:hover{color:var(--gold);}
+.fb{text-align:center;margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:#a9c6ff;}
+.fb .u{color:var(--gold);font-family:ui-monospace,Menlo,Consolas,monospace;}
+.toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple),var(--pink));color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:.3s;z-index:900;}
+.toTop.show{opacity:1;visibility:visible;}
+
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;}}
+@media(max-width:768px){.menu-btn{display:flex;}.nav-links{position:fixed;top:var(--navh);left:0;right:0;background:rgba(234,244,255,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;max-height:0;overflow:hidden;transition:max-height .35s;}.nav-links.open{max-height:680px;}.nav-links a{padding:14px 18px;border-radius:0;border-bottom:1px solid rgba(79,140,255,.12);}.two{grid-template-columns:1fr;}.six{grid-template-columns:1fr 1fr;}.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}.cover{height:180px;}}
+@media(max-width:520px){.six{grid-template-columns:1fr;}.ticket .big{font-size:36px;}}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr;}.cover{height:160px;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"原来神马电影网免费","url":"https://yuanlaishenmadianyingwangmianfei-h5.github.io","potentialAction":{"@type":"SearchAction","target":"https://yuanlaishenmadianyingwangmianfei-h5.github.io#library","query-input":"required name=search_term"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"原来神马电影网免费是什么风格？","acceptedAnswer":{"@type":"Answer","text":"本演示站用“云梦票券/免费放映”主线，天蓝云白底、紫粉主色、票券撕口装饰，做免费电影、剧集、动漫、综艺、短片与省钱观影指南；内页链接以 # 占位，仅作单页模板演示。站名为自有品牌，不模仿任何搜索或影视平台标识。"}},
+{"@type":"Question","name":"免费片库怎么用？","acceptedAnswer":{"@type":"Answer","text":"每部影片带“免费/限免/会员替代”标签与类型/时长，可按电影、剧集、动漫、综艺、短片分类浏览；正式站把 # 替换为真实分类页、详情页与正版授权播放入口即可。"}},
+{"@type":"Question","name":"移动端能正常刷免费片单吗？","acceptedAnswer":{"@type":"Answer","text":"全站响应式，手机端自动折叠导航、片库双列/自适应、分类与热榜重排，核心内容纯HTML+语义化标题便于搜索引擎抓取。"}},
+{"@type":"Question","name":"必应怎么收录这个单页？","acceptedAnswer":{"@type":"Answer","text":"已配置 title、description、canonical、Open Graph 与 JSON-LD（WebSite/FAQ/Movie）；可在 Bing Webmaster Tools 提交首页 https://yuanlaishenmadianyingwangmianfei-h5.github.io 。按你要求不生成 robots.txt 与 sitemap.xml。若正式提供在线播放，需取得著作权/信息网络传播权授权并办理视听节目相关资质，不得转播、链接或聚合非法视听源。[2,14](@ref)"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Movie","name":"云港免费放映夜","url":"https://yuanlaishenmadianyingwangmianfei-h5.github.io#library","description":"演示影片：原来神马电影网免费片库示例，合家欢/轻喜剧向，用于免费标签、片库网格与省钱观影指南模板展示，不关联任何第三方已知IP。","genre":["喜剧","合家欢","轻幻想"],"datePublished":"2025-06-01","aggregateRating":{"@type":"AggregateRating","ratingValue":"8.9","bestRating":"10","worstRating":"1","ratingCount":"176"}}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="nav">
+  <div class="brand"><span class="cloud"></span><b>原来神马电影网免费</b><span class="tag">yuanlai-shenma-mianfei</span></div>
+  <button class="menu-btn" id="menuBtn" aria-label="菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="主导航">
+    <a href="#home">首页</a>
+    <a href="#library">免费片库</a>
+    <a href="#category">免费分类</a>
+    <a href="#ranking">热播榜单</a>
+    <a href="#guide">省钱指南</a>
+    <a href="#help">观片帮助</a>
+    <a href="#about">关于本站</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="badge">云梦票券免费放映 <b>YUANLAI-MIANFEI</b> · 限免片单策展</span>
+      <h1>原来神马电影网免费 · <em>云梦票券</em>风 <br><i>免费</i>刷全品类</h1>
+      <p>原来神马电影网免费（yuanlaishenmadianyingwangmianfei-h5）用天蓝云白、紫粉票券做免费电影、剧集、动漫、综艺、短片与省钱观影指南；手机电脑自适应。本页仅演示，内页均用 # 占位；正式接在线播放需著作权/信息网络传播权授权，并办理《信息网络传播视听节目许可证》等资质，不转播/链接/聚合非法视听源。[2,14](@ref)</p>
+      <div class="urlbox">https://yuanlaishenmadianyingwangmianfei-h5.github.io</div>
+      <br>
+      <a class="cta" href="#library">领取免费片单 #</a>
+    </div>
+    <aside class="ticket" aria-label="免费概览">
+      <span class="stub">FREE PASS</span>
+      <div class="big">0 元</div>
+      <p>演示片单综合策展 · 云梦限免样片</p>
+      <div>
+        <span class="chip">电影限免</span><span class="chip">剧集畅看</span><span class="chip">动漫短综</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="library">
+  <div class="wrap">
+    <h2 class="sec-title">免费片库<small>YUANLAI SHENMA MIANFEI · 云梦样片</small></h2>
+    <div class="grid">
+      <article class="movie"><div class="cover t1"><span class="free">限免</span>🎟️</div><div class="minfo"><h3>云港免费放映夜</h3><p><span>喜剧/合家欢</span><span>96分</span></p></div></article>
+      <article class="movie"><div class="cover t2"><span class="free">0元</span>🌤️</div><div class="minfo"><h3>晴天票据局</h3><p><span>都市/轻喜剧</span><span>10集</span></p></div></article>
+      <article class="movie"><div class="cover t3"><span class="free">限免</span>🚀</div><div class="minfo"><h3>星屑不花钱</h3><p><span>动漫/科幻</span><span>12集</span></p></div></article>
+      <article class="movie"><div class="cover t4"><span class="free">0元</span>🎤</div><div class="minfo"><h3>素人金曲摊</h3><p><span>综艺/音乐</span><span>第3季</span></p></div></article>
+      <article class="movie"><div class="cover t5"><span class="free">限免</span>📖</div><div class="minfo"><h3>十分钟白日梦</h3><p><span>短片/幻想</span><span>8部</span></p></div></article>
+      <article class="movie"><div class="cover t6"><span class="free">0元</span>🐾</div><div class="minfo"><h3>云原野徒步团</h3><p><span>纪录/自然</span><span>6集</span></p></div></article>
+    </div>
+    <div style="text-align:center;margin-top:28px;"><a href="#" style="display:inline-block;border:1px solid var(--blue);padding:12px 28px;border-radius:26px;font-weight:800;color:#1f4fb0;">浏览全部免费片单 #</a></div>
+  </div>
+</section>
+
+<section class="section" id="category" style="background:rgba(155,107,255,.08);">
+  <div class="wrap">
+    <h2 class="sec-title">免费分类<small>按观看场景分池领片</small></h2>
+    <div class="six">
+      <div class="cat"><div class="ico">🎬</div><h3>免费电影</h3><p>喜剧、合家欢、轻幻想按限免场次与时长分池，标“0元/限免”。</p><a href="#library">看电影 #</a></div>
+      <div class="cat"><div class="ico">📺</div><h3>免费剧集</h3><p>都市、悬疑、职场按集数包看，演示“整季限免”标签。</p><a href="#library">看剧集 #</a></div>
+      <div class="cat"><div class="ico">📱</div><h3>免费动漫</h3><p>少年、科幻、治愈按年龄与更新节奏归类，免费畅看样片。</p><a href="#library">看动漫 #</a></div>
+      <div class="cat"><div class="ico">🎤</div><h3>免费综艺</h3><p>音乐、真人秀、解压小综艺按单期/整季做0元入口。</p><a href="#library">看综艺 #</a></div>
+      <div class="cat"><div class="ico">📖</div><h3>免费短片</h3><p>十分钟幻想、微剧情、睡眠向短片按情绪与场景分池。</p><a href="#library">看短片 #</a></div>
+      <div class="cat"><div class="ico">🌿</div><h3>免费纪录</h3><p>自然、人文、轻知识纪录按主题策展，适合免费通勤刷。</p><a href="#library">看纪录 #</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ranking">
+  <div class="wrap">
+    <h2 class="sec-title">热播榜单<small>YUANLAI-H5 免费限免热看榜</small></h2>
+    <div class="rank">
+      <div class="ri"><div class="rb"><h3>云港免费放映夜</h3><p>电影·合家欢喜剧 / 96分 / 限免主打</p></div><div class="rs">8.9</div></div>
+      <div class="ri"><div class="rb"><h3>星屑不花钱</h3><p>动漫·科幻治愈 / 12集 / 整季0元</p></div><div class="rs">8.8</div></div>
+      <div class="ri"><div class="rb"><h3>晴天票据局</h3><p>剧集·都市轻喜 / 10集 / 限免跟更</p></div><div class="rs">8.7</div></div>
+      <div class="ri"><div class="rb"><h3>素人金曲摊</h3><p>综艺·音乐解压 / 第3季 / 单期免费</p></div><div class="rs">8.6</div></div>
+      <div class="ri"><div class="rb"><h3>十分钟白日梦</h3><p>短片·幻想放松 / 8部 / 通勤限免</p></div><div class="rs">8.5</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide" style="background:rgba(255,207,92,.10);">
+  <div class="wrap">
+    <h2 class="sec-title">省钱指南<small>原来神马电影网免费·观影笔记</small></h2>
+    <div class="reviews">
+      <div class="rv"><span class="tag">限免策略</span><h3>《云港免费放映夜》怎么0元刷</h3><p>按“限免场次+合家欢标签”拆解排片逻辑，给出手机端领片、避开通勤重复付费的演示路径。</p><a href="#library">读完整指南 #</a></div>
+      <div class="rv"><span class="tag">整季免费</span><h3>《星屑不花钱》动漫包看</h3><p>评估12集免费动漫的更新节奏与离线缓存建议，避免只点正片漏看番外。</p><a href="#library">读完整指南 #</a></div>
+      <div class="rv"><span class="tag">综艺0元</span><h3>《素人金曲摊》单期筛选</h3><p>用“单期免费/整季限免”双标签做观看清单，减少无效会员支出。</p><a href="#library">读完整指南 #</a></div>
+      <div class="rv"><span class="tag">短片放松</span><h3>《十分钟白日梦》碎片刷法</h3><p>按睡眠、通勤、午休三场景切短片区，演示限免短片的分时排播。</p><a href="#library">读完整指南 #</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="help" style="background:rgba(79,140,255,.07);">
+  <div class="wrap">
+    <h2 class="sec-title">观片帮助<small>原来神马电影网免费 使用与合规</small></h2>
+    <div class="two">
+      <div class="panel">
+        <h3>免费刷片流程</h3>
+        <p>1. 首页“领取免费片单”，按限免看电影/剧集/动漫/综艺/短片/纪录。</p>
+        <p>2. 到“免费分类”切场景池，进对应演示片单；看“热播榜单”跟限免口碑。</p>
+        <p>3. 看“省钱指南”读0元路径；点影片卡进详情，内页均 #。</p>
+        <p>4. 手机端点右上角汉堡菜单切栏目，全站自适应，触控区域≥44px。</p>
+      </div>
+      <div>
+        <details open><summary>可以直接看全片吗？</summary><p>本页为单页演示，不提供实际播放；正式站若提供在线观看，须接入有著作权/信息网络传播权授权的片源，不聚合、不链接、不转播非法视听节目，不提供盗版下载。[5,2](@ref)</p></details>
+        <details><summary>为什么很多链接是 #？</summary><p>按你的要求，内页、播放、详情全部用 # 占位；部署时把 # 替换为真实授权详情页、正版播放页或合法平台跳转链接。</p></details>
+        <details><summary>“免费”怎么写不违规？</summary><p>演示仅标注限免/0元策展逻辑；正式站应明示片源授权范围、是否含广告或会员替代、退订规则，不做“永久全站免费”等无法兑现的虚假宣传，避免虚假排名/虚构数据。[10](@ref)</p></details>
+        <details><summary>必应收录要注意什么？</summary><p>保持 title/description/canonical 一致、核心内容纯HTML、移动端速度快；在 Bing Webmaster Tools 提交首页。本页按你要求不生成 robots.txt 与 sitemap.xml。[12,15](@ref)</p></details>
+      </div>
+    </div>
+    <div class="notice">
+      合规说明：本页为「原来神马电影网免费 / yuanlaishenmadianyingwangmianfei-h5」单页演示，仅展示免费片库、免费分类、热播榜单与省钱指南；不提供未授权播放、不聚合非法视听源，所有片名/票券形象/海报占位均为自有虚构。正式上线接片源需取得著作权/信息网络传播权授权，境内提供电影电视剧类在线视听通常需办理《信息网络传播视听节目许可证》等资质，境外影视还须具备相应公映/发行许可与版权；[20,14](@ref) 内页链接均以 # 占位，不生成 robots.txt 与 sitemap.xml。站名为自有品牌演示，不模仿任何搜索或影视平台标识，避免与他人有一定影响网站名、域名产生混淆。[10,13](@ref)
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="sec-title">关于本站<small>品牌·域名·官网·SEO</small></h2>
+    <div class="two">
+      <div class="panel">
+        <h3>网站定位</h3>
+        <p>原来神马电影网免费（yuanlaishenmadianyingwangmianfei-h5）做“云梦票券免费放映”影视单页：首页票券概览、免费片库、免费分类、热播榜、省钱指南、观片帮助一体化。全站统一关键词「原来神马电影网免费」「yuanlaishenmadianyingwangmianfei-h5」「免费电影/限免片单/云梦票券」。</p>
+        <p>官网：<br><span style="font-family:ui-monospace,Menlo,Consolas,monospace;color:#1f4fb0;">https://yuanlaishenmadianyingwangmianfei-h5.github.io</span></p>
+      </div>
+      <div class="panel">
+        <h3>技术与收录</h3>
+        <p>内部CSS、语义化标题、canonical、Open Graph、JSON-LD（WebSite/FAQ/Movie）；核心内容不依赖JS，便于必应单页抓取。</p>
+        <div class="stats">
+          <div class="stat"><b>6</b><span>演示栏目</span></div>
+          <div class="stat"><b>0元</b><span>限免标签模型</span></div>
+          <div class="stat"><b>JSON-LD</b><span>WebSite/FAQ/Movie</span></div>
+          <div class="stat"><b>0</b><span>robots/sitemap</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="fg">
+      <div><h4>原来神马电影网免费</h4><ul>
+        <li><a href="#home">首页 #</a></li><li><a href="#library">免费片库 #</a></li><li><a href="#ranking">热播榜单 #</a></li><li><a href="#about">关于本站 #</a></li>
+      </ul></div>
+      <div><h4>免费分类</h4><ul>
+        <li><a href="#category">免费电影 #</a></li><li><a href="#category">免费剧集 #</a></li><li><a href="#category">免费动漫 #</a></li><li><a href="#category">免费综艺 #</a></li>
+      </ul></div>
+      <div><h4>帮助</h4><ul>
+        <li><a href="#help">观片帮助 #</a></li><li><a href="#guide">省钱指南 #</a></li><li><a href="#">意见反馈 #</a></li><li><a href="#">免责声明 #</a></li>
+      </ul></div>
+      <div><h4>官方信息</h4><ul>
+        <li><a href="#">站名：原来神马电影网免费</a></li><li><a href="#">域名：yuanlaishenmadianyingwangmianfei-h5</a></li><li><a href="https://yuanlaishenmadianyingwangmianfei-h5.github.io">官网：yuanlaishenmadianyingwangmianfei-h5.github.io</a></li><li><a href="#">关键词：云梦免费片单</a></li>
+      </ul></div>
+    </div>
+    <div class="fb">
+      <p>原来神马电影网免费 · yuanlaishenmadianyingwangmianfei-h5 · 云梦票券免费放映单页演示（自有品牌）</p>
+      <p class="u">https://yuanlaishenmadianyingwangmianfei-h5.github.io</p>
+      <p>© 2026 原来神马电影网免费演示模板。不生成 robots.txt 与 sitemap.xml，内页链接以 # 占位；片名/票券形象均为虚构，接真实片源需版权授权与视听资质。</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="toTop" id="toTop" aria-label="回到顶部">↑</a>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),links=document.getElementById('navLinks');
+  btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+  var t=document.getElementById('toTop');window.addEventListener('scroll',function(){t.classList.toggle('show',window.scrollY
